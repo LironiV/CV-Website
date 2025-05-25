@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Mijn CV</title>
+
+    <style>
+
+        #privateInfo {
+            display: none;
+        }
+
+        #wrongPass {
+            color: red;
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <h1>Mijn CV</h1>
+
+    <p>Naam: Jan Jansen</p>
+
+    <p>Opleiding: Bachelor in IT</p>
+
+    <!-- enzovoort -->
+    <!-- Privé info -->
+
+    <div id="privateInfo">
+
+        <h2>Privé gegevens</h2>
+
+        <img src="mijnfoto.jpg" alt="Mijn Foto" width="150">
+
+        <p>Adres: Voorbeeldstraat 12, 1000 Brussel</p>
+
+        <p>Telefoon: 012 34 56 78</p>
+
+    </div>
+
+
+
+    <!-- Wachtwoordveld -->
+
+    <div id="passwordSection">
+
+        <p>Voer wachtwoord in om privégegevens te tonen:</p>
+
+        <input type="password" id="passwordInput">
+
+        <button onclick="checkPassword()">Toon info</button>
+
+        <p id="wrongPass">Verkeerd wachtwoord</p>
+
+    </div>
+
+
+
+    <script>
+
+  const CORRECT_PASSWORD = "geheim123"; // verander dit naar je eigen wachtwoord
+
+
+
+  function checkPassword() {
+
+    const input = document.getElementById("passwordInput").value;
+
+    if (input === CORRECT_PASSWORD) {
+
+      document.getElementById("privateInfo").style.display = "block";
+
+      document.getElementById("passwordSection").style.display = "none";
+
+    } else {
+
+      document.getElementById("wrongPass").style.display = "block";
+
+    }
+
+  }
+
+    </script>
+
+
+
+</body>
+
+</html>

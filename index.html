@@ -16,14 +16,6 @@
             opacity: 1 !important;
             transform: translate(0) scale(1) !important;
         }
-        #privateInfo {
-            display: none !important;
-        }
-
-        #wrongPass {
-            color: red !important;
-            display: none !important;
-        }
       </style>
     </noscript>
   </head>
@@ -94,19 +86,19 @@
                                       </div>
                                       <div class="row mt-3">
                                           <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                                          <div  id="privateInfo">valerio.lironi@gmail.com</div>
+                                          <div class="col-sm-8">valerio.lironi@gmail.com</div>
                                       </div>
                                       <div class="row mt-1">
                                           <div class="col-sm-4"><strong class="text-uppercase"></strong></div>
-                                          <div class="col-sm-8" id="privateInfo">valerio@lironi.net</div>
+                                          <div class="col-sm-8">valerio@lironi.net</div>
                                       </div>
                                       <div class="row mt-3">
                                           <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-                                          <div class="col-sm-8" id="privateInfo">+32472122109</div>
+                                          <div class="col-sm-8">+32472122109</div>
                                       </div>
                                       <div class="row mt-3">
                                           <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-                                          <div class="col-sm-8" id="privateInfo">Antwerp, Belgium</div>
+                                          <div class="col-sm-8">Antwerp, Belgium</div>
                                       </div>
                                       <div class="row mt-3">
                                           <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
@@ -768,17 +760,6 @@
                       </div>
                   </div>
               </div>
-              <div id="passwordSection">
-
-                  <p>Enter password to show private information:</p>
-
-                  <input type="password" id="passwordInput">
-
-                  <button onclick="checkPassword()">Show Info</button>
-
-                  <p id="wrongPass">Wrong Password</p>
-
-              </div>
           </div>
       </div>
       <footer class="footer">
@@ -800,31 +781,6 @@
           var Bday = +new Date(Bdate);
           var age = ~~((Date.now() - Bday) / (31557600000))
           document.getElementById('birthday').innerHTML = age;
-      </script>
-      <script>
-
-          const CORRECT_PASSWORD = "Blue2025"; // verander dit naar je eigen wachtwoord
-
-
-
-          function checkPassword() {
-
-              const input = document.getElementById("passwordInput").value;
-
-              if (input === CORRECT_PASSWORD) {
-
-                  document.getElementById("privateInfo").style.display = "block";
-
-                  document.getElementById("passwordSection").style.display = "none";
-
-              } else {
-
-                  document.getElementById("wrongPass").style.display = "block";
-
-              }
-
-          }
-
       </script>
   </body>
 </html>

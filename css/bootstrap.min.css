@@ -4323,12 +4323,12 @@ tbody.collapse.show {
     background-color: #fff
 }
 
-.list-group-item.active {
-    z-index: 2;
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
-}
+    .list-group-item.active {
+        z-index: 2;
+        color: #fff;
+        background-color: #50cc5c;
+        border-color: #50cc5c
+    }
 
 .list-group-flush .list-group-item {
     border-right: 0;
